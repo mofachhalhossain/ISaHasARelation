@@ -17,11 +17,23 @@ class Vehicle{
         System.out.println("Release Date: "+releaseDate+" Name: "+name+" Model: "+model+" Color: "+color);
     }
 }
-//Has_A Relationship
+//Has_A Relationship with Vehicle
 class BMW{
     Vehicle vehicleBMW = new Vehicle(12,"BMW","2013","Red");
+    engine BMWengine = new engine();
 
-
+}
+//Has_A Relation with BMW
+class engine{
+    void start(int speed){
+        System.out.println("Engine start at: "+speed+"km/h");
+    }
+    void stop(int speed){
+        System.out.println("Engine stop at: "+speed+"km/h");
+    }
+    void run(int speed){
+        System.out.println("Engine run at : "+speed+"km/h");
+    }
 }
 
 public class Main {
@@ -29,6 +41,8 @@ public class Main {
     public static void main(String[] args) {
         BMW bmw1 = new BMW();
         bmw1.vehicleBMW.display();
+        bmw1.BMWengine.start(0);
+        bmw1.BMWengine.run(150);
     }
 }
 
