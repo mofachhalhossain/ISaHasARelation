@@ -23,7 +23,7 @@ class BMW{
     engine BMWengine = new engine();
 
 }
-//Has_A Relation with BMW
+//Is_A Relation with BMW
 class engine{
     void start(int speed){
         System.out.println("Engine start at: "+speed+"km/h");
